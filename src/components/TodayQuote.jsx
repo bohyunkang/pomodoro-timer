@@ -11,8 +11,10 @@ export default function TodayQuote({ close }) {
   };
 
   return (
-    <article>
-      <Quote>{quote.advice}</Quote>
+    <Article>
+      <Quote>
+        {quote.message}
+      </Quote>
       <ButtonWrapper>
         <Button
           type="button"
@@ -29,19 +31,25 @@ export default function TodayQuote({ close }) {
           돌아가기
         </Button>
       </ButtonWrapper>
-    </article>
+    </Article>
   );
 }
+const Article = styled.article`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 const Quote = styled.h3`
-  text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  line-height: 1.6;
 `;
 
 const ButtonWrapper = styled.div`
-  position: absolute;
-  bottom: 3em;
-  right: 5em;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
 `;
 
 const Button = styled.button`

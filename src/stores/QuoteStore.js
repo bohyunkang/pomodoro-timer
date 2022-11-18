@@ -5,11 +5,17 @@ export default class QuoteStore extends Store {
   constructor() {
     super();
 
-    this.quote = {};
+    this.quotes = [];
+
+    this.quote = '';
   }
 
   async fetchQuote() {
-    this.quote = await quoteService.fetchQuote();
+    this.quotes = await quoteService.fetchQuotes();
+
+    const randomNumber = Math.floor(Math.random() * 500);
+
+    this.quote = this.quotes[randomNumber];
 
     this.publish();
   }

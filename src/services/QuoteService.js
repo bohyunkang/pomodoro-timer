@@ -2,14 +2,13 @@ import axios from 'axios';
 
 export default class QuoteService {
   instance = axios.create({
-    baseURL: 'https://api.adviceslip.com',
+    baseURL: 'http://localhost:8080',
   });
 
-  async fetchQuote() {
-    const { data } = await this.instance.get('/advice');
-    const { slip } = data;
+  async fetchQuotes() {
+    const { data } = await this.instance.get('/data.json');
 
-    return slip;
+    return data;
   }
 }
 
