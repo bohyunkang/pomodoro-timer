@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import TodayQuote from './TodayQuote';
 
 jest.mock('../hooks/useQuoteStore', () => () => ({
-  quote: { id: 1, advice: '오늘을 행복하게 살면 된다.' },
+  quote: { author: '강보니', message: '오늘을 행복하게 살면 된다.' },
   fetchQuote: jest.fn(),
 }));
 

@@ -35,5 +35,5 @@ test('App 타이머 화면으로 잘 돌아오나 확인하자.', () => {
 
   fireEvent.click(screen.getByRole('button', { name: '돌아가기' }));
 
-  screen.getByText(/뽀그로 타이머/);
+  screen.getByText(/뽀모도로 타이머/);
 });
