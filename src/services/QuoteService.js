@@ -6,7 +6,7 @@ export default class QuoteService {
   });
 
   async fetchQuotes() {
-    const { data } = await this.instance.get('/data.json');
+    const { data } = await this.instance.get('/data/data.json');
 
     return data;
   }
