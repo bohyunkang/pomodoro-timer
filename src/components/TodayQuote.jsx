@@ -44,6 +44,7 @@ const Article = styled.article`
 const Quote = styled.h3`
   font-size: 1.2em;
   line-height: 1.6;
+  overflow-y: scroll;
 `;
 
 const ButtonWrapper = styled.div`
